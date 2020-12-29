@@ -1,0 +1,223 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.plantspecies.com/ontologies/plantspecies.owl>
+
+
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isDoneTo>
+
+    
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isDoneWith>
+
+    InverseOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsedIn>
+    
+    
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isGivenBy>
+
+    InverseOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isGiving>
+    
+    
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isGiving>
+
+    InverseOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isGivenBy>
+    
+    
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsedBy>
+
+    InverseOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsing>
+    
+    
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsedIn>
+
+    InverseOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isDoneWith>
+    
+    
+ObjectProperty: <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsing>
+
+    InverseOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsedBy>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Accuracy>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Algorithms>
+
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Augmentation>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#Techniques>,
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsedBy> some <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#BitterGourd>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Botanist>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#Users>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Capsicum>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Chilli>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Classification>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#SupervisedLearning>,
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isDoneTo> only <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>,
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isDoneWith> only <http://www.plantspecies.com/ontologies/plantspecies.owl#ConvolutionalNeuralNetwork>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#ConvolutionalNeuralNetwork>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#Algorithms>,
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isGiving> some <http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>,
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsedIn> only <http://www.plantspecies.com/ontologies/plantspecies.owl#Classification>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#EnvironmentalScienceStudents>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#Users>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#F-score>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#GroundNut>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Lime>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Maila>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#MatureTeaTree>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isGivenBy> only <http://www.plantspecies.com/ontologies/plantspecies.owl#ConvolutionalNeuralNetwork>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#MustardTree>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#NatureEnthusiasts>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#Users>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#isUsing> some <http://www.plantspecies.com/ontologies/plantspecies.owl#Augmentation>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Precision>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Recall>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#SickleSenna>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#SupervisedLearning>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#Techniques>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Techniques>
+
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#Users>
+
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#WhiteGiganticSwallowWort>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+Class: <http://www.plantspecies.com/ontologies/plantspecies.owl#WoodApple>
+
+    SubClassOf: 
+        <http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>
+    
+    
+DisjointClasses: 
+    <http://www.plantspecies.com/ontologies/plantspecies.owl#Accuracy>,<http://www.plantspecies.com/ontologies/plantspecies.owl#F-score>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Precision>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Recall>
+
+DisjointClasses: 
+    <http://www.plantspecies.com/ontologies/plantspecies.owl#Algorithms>,<http://www.plantspecies.com/ontologies/plantspecies.owl#ModelAccuracy>,<http://www.plantspecies.com/ontologies/plantspecies.owl#PlantCategories>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Techniques>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Users>
+
+DisjointClasses: 
+    <http://www.plantspecies.com/ontologies/plantspecies.owl#BitterGourd>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Capsicum>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Chilli>,<http://www.plantspecies.com/ontologies/plantspecies.owl#GroundNut>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Lime>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Maila>,<http://www.plantspecies.com/ontologies/plantspecies.owl#MatureTeaTree>,<http://www.plantspecies.com/ontologies/plantspecies.owl#MustardTree>,<http://www.plantspecies.com/ontologies/plantspecies.owl#SickleSenna>,<http://www.plantspecies.com/ontologies/plantspecies.owl#WhiteGiganticSwallowWort>,<http://www.plantspecies.com/ontologies/plantspecies.owl#WoodApple>
+
+DisjointClasses: 
+    <http://www.plantspecies.com/ontologies/plantspecies.owl#BitterGourd>,<http://www.plantspecies.com/ontologies/plantspecies.owl#GroundNut>,<http://www.plantspecies.com/ontologies/plantspecies.owl#Maila>,<http://www.plantspecies.com/ontologies/plantspecies.owl#MatureTeaTree>,<http://www.plantspecies.com/ontologies/plantspecies.owl#MustardTree>,<http://www.plantspecies.com/ontologies/plantspecies.owl#SickleSenna>,<http://www.plantspecies.com/ontologies/plantspecies.owl#WhiteGiganticSwallowWort>,<http://www.plantspecies.com/ontologies/plantspecies.owl#WoodApple>
+
+DisjointClasses: 
+    <http://www.plantspecies.com/ontologies/plantspecies.owl#Botanist>,<http://www.plantspecies.com/ontologies/plantspecies.owl#EnvironmentalScienceStudents>,<http://www.plantspecies.com/ontologies/plantspecies.owl#NatureEnthusiasts>
+
